@@ -50,7 +50,8 @@ app.post("/submit-form", (req, res) => {
             return res.status(500).json({ message: "Internal Server Error" });
         }
         console.log("Record Inserted Successfully");
-         res.redirect("/?msg=sent");
+         // res.redirect("/?msg=sent");
+        res.json({ message: "Message Sent Successfully" });
     });
 });
 
